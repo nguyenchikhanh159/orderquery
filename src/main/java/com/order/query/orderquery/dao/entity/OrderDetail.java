@@ -21,9 +21,8 @@ public class OrderDetail {
     @JoinColumn(name="order_id")
     private Order order;
 
-    @ManyToOne
-    @JoinColumn(name="ticket_id")
-    private Ticket ticket;
+    @Column(name="ticket_id")
+    private Integer ticketId;
 
     @Column(name = "quantity")
     private Integer quantity;

@@ -43,7 +43,7 @@ public class OrderQueryService {
     private OrderDto mapToOrderDto(Order order) {
         return OrderDto.builder()
                 .orderId(order.getId())
-                .userId(order.getUser().getId())
+                .userId(order.getUserId())
                 .build();
     }
 
@@ -60,7 +60,7 @@ public class OrderQueryService {
         return OrderDetailDto.builder()
                 .orderDetailId(orderDetail.getId())
                 .orderId(orderDetail.getOrder().getId())
-                .ticketId(orderDetail.getTicket().getId())
+                .ticketId(orderDetail.getTicketId())
                 .quantity(orderDetail.getQuantity())
                 .build();
     }
